@@ -11,10 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}> 
         <WebsocketChat />
       </MuiThemeProvider>
 
