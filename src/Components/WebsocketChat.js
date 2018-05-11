@@ -43,7 +43,13 @@ export class WebsocketChat extends React.Component {
             console.log(messages, "message");
             const message = this.state.message;
             const usersId = this.state.users;
+            if(this.connection.connectionId === socketId){
+                message.push("me :"+ messages);
+            }
+            else
+            {  
             message.push(socketId + " said : " + messages + "")
+            }
             usersId.push(socketId)
             self.setState({
                 users: usersId,
