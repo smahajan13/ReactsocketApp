@@ -12,7 +12,7 @@ export class WebsocketChat extends React.Component {
             messageReceived: ""
         }
         this.flag = 0;
-        this.connection = new window.WebSocketManager.Connection("ws://localhost:5000/chat");
+        this.connection = new window.WebSocketManager.Connection("ws://play-chat-application.herokuapp.com/chat");
 
         this.connection.connectionMethods.onConnected = () => {
         }
